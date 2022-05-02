@@ -1,0 +1,346 @@
+/* Colors */
+
+:root {
+    --black: rgba(0, 0, 0, 1);
+    --white: rgba(255, 255, 255, 1);
+    --dark: rgba(31, 31, 39, 1);
+    --light: rgba(223, 223, 231, 1);
+    --medium: rgba(127, 127, 135, 1);
+    --red: rgba(223, 31, 0, 1);
+    --green: rgba(0, 159, 63, 1);
+    --blue: rgba(0, 127, 223, 1);
+    --dark-accent: rgba(63, 63, 71, 1);
+    --light-accent: rgba(255, 255, 255, 1);
+    --medium-accent: rgba(143, 143, 151, 1);
+    --red-accent: rgba(255, 31, 0, 1);
+    --green-accent: rgba(0, 191, 63, 1);
+    --blue-accent: rgba(0, 159, 255, 1);
+    --light-tint: rgba(239, 239, 243, 1);
+    --light-shade: rgba(207, 207, 215, 1);
+    --dark-tint: rgba(47, 47, 55, 1);
+    --dark-shade: rgba(15, 15, 23, 1);
+    --medium-tint: rgba(143, 143, 151, 1);
+    --medium-shade: rgba(111, 111, 119, 1);
+}
+
+/* Base Styles */
+
+* {
+    position: relative;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-size: 16px;
+    font-family: Avenir, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: var(--light);
+    color: var(--dark);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+}
+
+h1 {
+    font-size: 3.815rem;
+}
+
+h2 {
+    font-size: 3.052rem;
+}
+
+h3 {
+    font-size: 2.441rem;
+}
+
+h4 {
+    font-size: 1.953rem;
+}
+
+h5 {
+    font-size: 1.563rem;
+}
+
+h6 {
+    font-size: 1.25rem;
+}
+
+p {
+    font-size: 1rem;
+}
+
+/* Container */
+
+#container {
+    display: flow-root;
+}
+
+/* Status */
+
+.info,
+.success,
+.failure {
+    font-weight: 700;
+}
+
+.info {
+    color: var(--blue);
+}
+
+.success {
+    color: var(--green);
+}
+
+.failure {
+    color: var(--red);
+}
+
+/* General Styles */
+
+.input {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.25rem;
+    font-family: Avenir, sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.25;
+    text-decoration: none;
+}
+
+.input:hover,
+.input:focus,
+.input:active {
+    border: none;
+    outline: none;
+}
+
+.link,
+.link:hover,
+.link:focus,
+.link:active {
+    color: var(--dark);
+}
+
+/* Component Styles */
+
+/* Box */
+
+.box {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 1rem;
+    background: var(--light-tint);
+    border-radius: 0.5rem;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Link */
+
+.input-text,
+.textarea {
+    padding: 0.4375rem 0.9375rem;
+    border: 0.0625rem solid var(--medium);
+    background: var(--white);
+    color: var(--dark);
+    box-shadow: inset 0 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.input-text:hover,
+.input-text:focus,
+.input-text:active,
+.textarea:hover,
+.textarea:focus,
+.textarea:active {
+    padding: 0.4375rem 0.9375rem;
+    border: 0.0625rem solid var(--dark);
+}
+
+.textarea {
+    resize: none;
+    min-height: 8rem;
+}
+
+/* Button */
+
+.button,
+.button-link {
+    background: var(--medium);
+    color: var(--white);
+    font-weight: 700;
+    box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.button:hover,
+.button:focus,
+.button:active,
+.button-link:hover,
+.button-link:focus,
+.button-link:active {
+    background: var(--medium-accent);
+}
+
+.button--dark,
+.button-link--dark {
+    background: var(--dark);
+}
+
+.button--dark:hover,
+.button--dark:focus,
+.button--dark:active,
+.button-link--dark:hover,
+.button-link--dark:focus,
+.button-link--dark:active {
+    background: var(--dark-accent);
+}
+
+.button--light,
+.button-link--light {
+    background: var(--light);
+    color: var(--dark);
+}
+
+.button--light:hover,
+.button--light:focus,
+.button--light:active,
+.button-link--light:hover,
+.button-link--light:focus,
+.button-link--light:active {
+    background: var(--light-accent);
+}
+
+.button--red,
+.button-link--red {
+    background: var(--red);
+}
+
+.button--red:hover,
+.button--red:focus,
+.button--red:active,
+.button-link--red:hover,
+.button-link--red:focus,
+.button-link--red:active {
+    background: var(--red-accent);
+}
+
+.button--green,
+.button-link--green {
+    background: var(--green);
+}
+
+.button--green:hover,
+.button--green:focus,
+.button--green:active,
+.button-link--green:hover,
+.button-link--green:focus,
+.button-link--green:active {
+    background: var(--green-accent);
+}
+
+.button--blue,
+.button-link--blue {
+    background: var(--blue);
+}
+
+.button--blue:hover,
+.button--blue:focus,
+.button--blue:active,
+.button-link--blue:hover,
+.button-link--blue:focus,
+.button-link--blue:active {
+    background: var(--blue-accent);
+}
+
+.button--small,
+.button-link--small {
+    padding: 0.2375rem 0.4375rem;
+}
+
+/* Table */
+
+.table {
+    width: 100%;
+    border-spacing: 0.125rem;
+    color: var(--white);
+    font-weight: 700;
+}
+
+.table__header {
+    background: var(--dark);
+}
+
+.table__body {
+    background: var(--medium);
+}
+
+.table__heading {
+    padding: 0.25rem;
+    border-radius: 0.125rem;
+}
+
+.table__row {
+    text-align: center;
+}
+
+.table__data {
+    padding: 0.25rem;
+    border-radius: 0.125rem;
+}
+
+.table__row--heading:hover {
+    background: var(--dark-tint);
+}
+
+.table__row--data:hover {
+    background: var(--medium-tint);
+}
+
+/* Header & Footer */
+
+.header__content {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4.25rem;
+    padding: 1rem;
+    text-align: right;
+    background: var(--light-shade);
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+.header__spacing {
+    width: 100%;
+    height: 4.25rem;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 1rem;
+    margin: 1rem;
+    text-align: right;
+    z-index: 1;
+}
+
